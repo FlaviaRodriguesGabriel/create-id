@@ -1,5 +1,11 @@
 # create-id
-Script to create ids to identify metadata of a consumer.
+Script to create ids to identify metadata of a consumer, including:
+* Get secrets at AWS Secrets Manager
+* Generate journeyId
+* Generate matrixId
+* Read csv file containing metadata about the consumer 
+* Process data from csv file
+* Insert data in 3 AWS Aurora MySQL tables
 
 ## Stack:
 * :snake: Python

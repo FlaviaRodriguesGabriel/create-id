@@ -1,9 +1,10 @@
 # create-id
-Script to create ids to identify a scope
+Script to create ids to identify metadata of a consumer.
 
 ## Stack:
 * :snake: Python
 * :cloud_with_lightning: AWS
+* :blue_square: Aurora MySQL DB
 
 ## Project
 ### Requirements

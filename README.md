@@ -21,7 +21,6 @@ Script to create ids to identify metadata of a consumer, including:
 ```
 python3 
 ```
-* Use examples provided @ './examples' to test application using BloomRPC or Postman
 * Have fun :)  
 
 ## AuroraDB

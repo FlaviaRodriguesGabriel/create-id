@@ -1,0 +1,7 @@
+﻿journey_name,tombamento,field_id,field_name,completeness_level,completeness_source
+Teste Jornada,FALSE,105,nome_completo,150,7
+Teste Jornada,FALSE,106,nome_fantasia,200,7
+Teste Jornada,FALSE,107,nome_apelido,100,7
+Teste Jornada,FALSE,108,tipo_pessoa,200,7
+Teste Jornada,FALSE,109,endereco_comercial,400,7
+Teste Jornada,FALSE,110,endereco_residencial,150,7

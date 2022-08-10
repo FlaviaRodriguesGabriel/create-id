@@ -1,3 +1,4 @@
+import csv
 import uuid
 from uuid import UUID
 
@@ -18,12 +19,19 @@ def generate_matrix_id() -> UUID:
     return matrix_id
 
 
-def read_csv_file():
-    pass
-
-
-def process_file(file):
-    pass
+def read_process_csv_file():
+    with open('journey-metadata.csv') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        line_count = 0
+        for row in csv_reader:
+            if line_count == 0:
+                print(f'Column names are {", ".join(row)}')
+                print(f'\t Journey {row[0]}')
+                line_count += 1
+            else:
+                print(f'\t{row[2]} with completeness_level {row[4]}, and source {row[5]}.')
+                line_count += 1
+        print(f'Processed {line_count} lines.')
 
 
 def insert_into_database(secrets, journey_id, matrix_id, processed_file):
@@ -35,8 +43,7 @@ def main(clear: bool = False) -> None:
     secrets = get_secrets()
     journey_id: UUID = generate_journey_id()
     matrix_id: UUID = generate_matrix_id()
-    file = read_csv_file()
-    processed_file = process_file(file)
+    processed_file = read_process_csv_file()
     insert_into_database(secrets, journey_id, matrix_id, processed_file)
 
 
